@@ -1,18 +1,18 @@
 {
-  "title": "Example Objective",
-  "description": "This is what an <strong>objective description</strong> looks like!",
+  "title": "Twilio Flex Pricing",
+  "description": "Twilio Flex is an <strong>extremely powerful</strong> cloud contact center solution, let's test your knowledge!",
   "validation_fields": [
     {
       "name": "answer1",
       "type": "text",
-      "placeholder": "type your answer here",
-      "label": "What is the name of the company that makes TwilioQuest?"
+      "placeholder": "in dollars",
+      "label": "What is the per active user hour pricefor using Flex?"
     },
     {
       "name": "answer2",
       "type": "text",
-      "placeholder": "type your answer here",
-      "label": "What is 2 + 2? Write the numerical response below."
+      "placeholder": "In thousands",
+      "label": "For prototyping, how many free hours you have in the free trial?"
     }
   ],
   "rewards": {

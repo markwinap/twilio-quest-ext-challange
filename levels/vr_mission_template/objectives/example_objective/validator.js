@@ -23,26 +23,29 @@ module.exports = async function (helper) {
   // Next, you test the user input - fail fast if they get one of the
   // answers wrong, or some aspect is wrong! Don't provide too much
   // negative feedback at once, have the player iterate.
-  if (!answer1 || !isTwilio(answer1)) {
+
+  try {assert.strictEqual(1, Number(answer1));
+    
+  } catch (e) {
     return helper.fail(`
-      The answer to the first question is incorrect. The company that
-      makes TwilioQuest starts with a "T" and ends with a "wilio".
+      Visit Twilio Flex Documentation For Further Assistance
+      https://www.twilio.com/flex.
     `);
   }
 
   // You can use npm or core Node.js dependencies in your validators!
-  try {
-    assert.strictEqual(R.add(2, 2), Number(answer2));
+  try {assert.strictEqual(5, Number(answer2));
+    
   } catch (e) {
     return helper.fail(`
-      The second answer you provided was either not a number, or not the
-      correct response for "what is 2 + 2".
+      Visit Twilio Flex Documentation For Further Assistance
+      https://www.twilio.com/flex.
     `);
   }
 
   // The way we usually write validators is to fail fast, and then if we reach
   // the end, we know the user got all the answers right!
   helper.success(`
-    Hooray! You did it!
+    Wow! You did it!
   `);
 };
