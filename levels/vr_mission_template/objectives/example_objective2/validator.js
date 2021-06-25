@@ -23,20 +23,22 @@ module.exports = async function (helper) {
   // Next, you test the user input - fail fast if they get one of the
   // answers wrong, or some aspect is wrong! Don't provide too much
   // negative feedback at once, have the player iterate.
-  if (!answer1 || !isTwilio(answer1)) {
+  try {
+    assert.strictEqual('Jeff Lawson', String(answer1));
+  } catch (e) {
     return helper.fail(`
-      The answer to the first question is incorrect. The company that
-      makes TwilioQuest starts with a "T" and ends with a "wilio".
+      Lets check on Wikipedia
+      https://en.wikipedia.org/wiki/Twilio
     `);
   }
 
   // You can use npm or core Node.js dependencies in your validators!
   try {
-    assert.strictEqual(R.add(2, 2), Number(answer2));
+    assert.strictEqual('Ask Your Developer: How to Harness the Power of Software Developers and Win in the 21st Century', String(answer2));
   } catch (e) {
     return helper.fail(`
-      The second answer you provided was either not a number, or not the
-      correct response for "what is 2 + 2".
+      Lets check the book pricing on Amazon
+      https://www.amazon.com/dp/0063018292/ref=cm_sw_em_r_mt_dp_XZ59TR9WHCCHAC62VPPQ 
     `);
   }
 
