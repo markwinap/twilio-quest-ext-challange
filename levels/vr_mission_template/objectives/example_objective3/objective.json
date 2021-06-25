@@ -6,16 +6,16 @@
       "name": "answer1",
       "type": "text",
       "placeholder": "type your answer here",
-      "label": "What is the name of the company that makes TwilioQuest?"
+      "label": "Name of Twilio mobile product for employees to build customer relationships"
     },
     {
       "name": "answer2",
       "type": "text",
       "placeholder": "type your answer here",
-      "label": "What is 2 + 2? Write the numerical response below."
+      "label": "Name of Twilio product for sending emails"
     }
   ],
   "rewards": {
-    "xp": 100
+    "xp": 300
   }
 }

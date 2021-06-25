@@ -25,18 +25,29 @@ module.exports = async function (helper) {
   // negative feedback at once, have the player iterate.
   if (!answer1 || !isTwilio(answer1)) {
     return helper.fail(`
-      The answer to the first question is incorrect. The company that
-      makes TwilioQuest starts with a "T" and ends with a "wilio".
+    Let's check Twilio official documentation
+      https://www.twilio.com/frontline
     `);
   }
 
+
+    // You can use npm or core Node.js dependencies in your validators!
+    try {
+      assert.strictEqual('Frontline', String(answer1));
+    } catch (e) {
+      return helper.fail(`
+      Let's check Twilio official documentation
+        https://www.twilio.com/sendgrid/marketing-campaigns
+      `);
+    }
+
   // You can use npm or core Node.js dependencies in your validators!
   try {
-    assert.strictEqual(R.add(2, 2), Number(answer2));
+    assert.strictEqual('SendGrid', String(answer2));
   } catch (e) {
     return helper.fail(`
-      The second answer you provided was either not a number, or not the
-      correct response for "what is 2 + 2".
+    Let's check Twilio official documentation
+      https://www.twilio.com/sendgrid/marketing-campaigns
     `);
   }
 
